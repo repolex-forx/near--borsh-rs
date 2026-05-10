@@ -1,0 +1,21 @@
+[2026-05-10T09:42:08Z] === ENRICH ITERATION 1 START | repo=near/borsh-rs sha=28bb5fda ===
+[2026-05-10T09:42:08Z] [iter=1] PHASE START: enrich repo=near/borsh-rs sha=28bb5fda runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/28bb5fda-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/28bb5fda9f285185a8c78c712d1e7e6ceba3be73.nq.gz
+[2026-05-10T09:42:08Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=77 MB
+[2026-05-10T09:42:09Z] [iter=1] AST store loaded triples=163409 load_secs=1 mem_mb=314 MB
+[2026-05-10T09:42:09Z] [iter=1] Step 2: Finding LSP targets mem_mb=314 MB
+[2026-05-10T09:42:10Z] [iter=1] LSP targets found call_sites=1117 imports=30 extends=0 implements=51 secs=0
+[2026-05-10T09:42:10Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=314 MB
+[2026-05-10T09:42:11Z] [iter=1] Position index built positions=12036 nodes_with_types=13913 secs=1 mem_mb=314 MB
+[2026-05-10T09:42:11Z] [iter=1] Step 3: Starting LSP resolution mem_mb=314 MB already_completed_types=[] already_completed_files=0
+[2026-05-10T09:42:11Z] [iter=1] Resolving target type target_type=call_site count=1117
+[2026-05-10T09:42:48Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.7 files_done=1 resolved=15 errors=8 current=borsh/tests/test_custom_reader.rs
+[2026-05-10T09:43:22Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=1.2 files_done=16 resolved=338 errors=388 current=borsh-derive-internal/src/enum_ser.rs
+[2026-05-10T09:43:29Z] [iter=1] Target type resolved target_type=call_site resolved=464 errors=481 secs=78 mem_mb=314 MB
+[2026-05-10T09:43:29Z] [iter=1] Resolving target type target_type=import_statement count=30
+[2026-05-10T09:43:43Z] [iter=1] Target type resolved target_type=import_statement resolved=29 errors=0 secs=14 mem_mb=314 MB
+[2026-05-10T09:43:43Z] [iter=1] Resolving target type target_type=implements_clause count=51
+[2026-05-10T09:43:56Z] [iter=1] HEARTBEAT target_type=implements_clause elapsed_min=1.8 files_done=1 resolved=35 errors=0 current=borsh/src/schema.rs
+[2026-05-10T09:43:57Z] [iter=1] Target type resolved target_type=implements_clause resolved=45 errors=0 secs=14 mem_mb=314 MB
+[2026-05-10T09:44:13Z] [iter=1] Step 5: Writing final enrichment file triples=9832
+[2026-05-10T09:44:13Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/28bb5fda9f285185a8c78c712d1e7e6ceba3be73.nq.gz size_kb=177
+[2026-05-10T09:44:13Z] [iter=1] PHASE END: enrich elapsed_s=125 elapsed_min=2.1 total_triples=9832
